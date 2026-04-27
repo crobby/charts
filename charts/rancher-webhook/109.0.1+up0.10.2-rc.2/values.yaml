@@ -1,0 +1,46 @@
+image:
+  repository: rancher/rancher-webhook
+  tag: v0.10.2-rc.1
+  imagePullPolicy: IfNotPresent
+
+global:
+  cattle:
+    systemDefaultRegistry: ""
+  hostNetwork: false
+
+mcm:
+  enabled: true
+
+# tolerations for the webhook deployment. See https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/ for more info
+tolerations: []
+nodeSelector: {}
+
+## PriorityClassName assigned to deployment.
+priorityClassName: ""
+
+# port assigns which port to use when running rancher-webhook
+port: 9443
+
+# Parameters for authenticating the kube-apiserver.
+auth:
+  # CA for authenticating kube-apiserver client certs. If empty, client connections will not be authenticated.
+  # Must be base64-encoded.
+  clientCA: ""
+  # Allowlist of CNs for kube-apiserver client certs. If empty, any cert signed by the CA provided in clientCA will be accepted.
+  allowedCNs: []
+
+# RBAC configuration for the rancher-webhook ServiceAccount.
+#
+# By default, the webhook's ServiceAccount is bound to a narrow ClusterRole
+# (defined alongside the binding in templates/rbac.yaml) that grants only
+# the API permissions the webhook actually exercises. This replaces the
+# historical cluster-admin binding.
+#
+# Escape hatch: if a regression is discovered where the webhook needs a
+# permission that has not yet been added to the narrow ClusterRole, set
+# rbac.useClusterAdmin=true to temporarily restore the cluster-admin
+# binding. This is intended as a short-term safety net; please file an
+# issue with the Forbidden error so the narrow ClusterRole can be updated
+# with evidence rather than guesses.
+rbac:
+  useClusterAdmin: false
