@@ -6,21 +6,23 @@ entries:
       catalog.cattle.io/certified: rancher
       catalog.cattle.io/experimental: 'true'
       catalog.cattle.io/hidden: 'true'
-      catalog.cattle.io/kube-version: '>= 1.33.0-0 < 1.36.0-0'
+      catalog.cattle.io/kube-version: '>= 1.33.0-0 < 1.37.0-0'
       catalog.cattle.io/namespace: cattle-fleet-system
       catalog.cattle.io/os: linux
       catalog.cattle.io/permits-os: linux,windows
       catalog.cattle.io/provides-gvr: clusters.fleet.cattle.io/v1alpha1
-      catalog.cattle.io/rancher-version: '>= 2.14.0-0 < 2.15.0-0'
+      catalog.cattle.io/rancher-version: '>= 2.14.0-0 < 2.16.0-0'
       catalog.cattle.io/release-name: fleet
     apiVersion: v2
-    appVersion: 0.15.0-rc.2
+    appVersion: 0.16.0-alpha.5
+    created: '2026-04-28T14:03:57.768705044-04:00'
     description: Fleet Controller - GitOps at Scale
-    digest: fa81816e069fcc0f13cc66f94dfb01c0afbdb6e34df24b99cdc38ba3244c1243
+    digest: cbe6eeb9afe8c5586313e3107ee988cd5138eee8e34c14f4fd2a0b554b44094d
+    icon: https://charts.rancher.io/assets/logos/fleet.svg
     name: fleet
     urls:
-    - assets/fleet/fleet-109.0.0+up0.15.0-rc.2.tgz
-    version: 109.0.0+up0.15.0-rc.2
+    - assets/fleet/fleet-110.0.0+up0.16.0-alpha.5.tgz
+    version: 110.0.0+up0.16.0-alpha.5
   fleet-crd:
   - annotations:
       catalog.cattle.io/certified: rancher
@@ -30,89 +32,105 @@ entries:
       catalog.cattle.io/permits-os: linux,windows
       catalog.cattle.io/release-name: fleet-crd
     apiVersion: v2
-    appVersion: 0.15.0-rc.2
+    appVersion: 0.16.0-alpha.5
+    created: '2026-04-28T14:03:57.954962229-04:00'
     description: Fleet CustomResourceDefinitions
-    digest: c66a57dddbdd4c1f7650632eccc7e400f38292fd39962a9b0bda2fba758387fc
+    digest: a11f24a4f958d89e377d1e5fb9a9aa84a3d60110db7ce31f2678b31973672ee8
+    icon: https://charts.rancher.io/assets/logos/fleet.svg
     name: fleet-crd
     urls:
-    - assets/fleet-crd/fleet-crd-109.0.0+up0.15.0-rc.2.tgz
-    version: 109.0.0+up0.15.0-rc.2
+    - assets/fleet-crd/fleet-crd-110.0.0+up0.16.0-alpha.5.tgz
+    version: 110.0.0+up0.16.0-alpha.5
+  fleet-agent:
+  - annotations:
+      catalog.cattle.io/certified: rancher
+      catalog.cattle.io/hidden: 'true'
+      catalog.cattle.io/kube-version: '>= 1.33.0-0 < 1.37.0-0'
+      catalog.cattle.io/namespace: cattle-fleet-system
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux,windows
+      catalog.cattle.io/rancher-version: '>= 2.14.0-0 < 2.16.0-0'
+      catalog.cattle.io/release-name: fleet-agent
+    apiVersion: v2
+    appVersion: 0.16.0-alpha.5
+    created: '2026-04-28T14:03:57.808899796-04:00'
+    description: Fleet Agent - GitOps at Scale
+    digest: 3cb69629385e2666d45d9fb40d1387471d4967779c6ebe1e4afbd44931564ba3
+    icon: https://charts.rancher.io/assets/logos/fleet.svg
+    name: fleet-agent
+    urls:
+    - assets/fleet-agent/fleet-agent-110.0.0+up0.16.0-alpha.5.tgz
+    version: 110.0.0+up0.16.0-alpha.5
   rancher-turtles:
   - annotations:
       catalog.cattle.io/certified: rancher
       catalog.cattle.io/display-name: Rancher Turtles
-      catalog.cattle.io/kube-version: '>= 1.33.0-0 < 1.36.0-0'
+      catalog.cattle.io/kube-version: '>= 1.33.0-0 < 1.37.0-0'
       catalog.cattle.io/managed: 'true'
       catalog.cattle.io/namespace: cattle-turtles-system
       catalog.cattle.io/os: linux
       catalog.cattle.io/permits-os: linux
-      catalog.cattle.io/rancher-version: '>= 2.14.0-0 < 2.15.0-0'
+      catalog.cattle.io/rancher-version: '>= 2.14.0-0 < 2.16.0-0'
       catalog.cattle.io/release-name: rancher-turtles
       catalog.cattle.io/scope: management
       catalog.cattle.io/type: cluster-tool
     apiVersion: v2
-    appVersion: 0.26.0-rc.6
+    appVersion: 0.26.0
+    created: '2026-04-28T14:04:00.748080633-04:00'
     description: Rancher Turtles - Cluster API integration in Rancher.
-    digest: c1ca5b70a5ba1734e1e550cb1e1a93b41265acba025a1c40b6b5630b2b84ff04
+    digest: dda4ca74c0ed78550251f5cdc7e7e4d9bbdd3999b44ffcbe852a3ea379b0cab5
+    home: https://github.com/rancher/turtles/
+    icon: file://assets/logos/rancher-turtles.svg
+    keywords:
+    - rancher
+    - cluster-api
+    - capi
+    - provisioning
     name: rancher-turtles
+    type: application
     urls:
-    - assets/rancher-turtles/rancher-turtles-109.0.0+up0.26.0-rc.6.tgz
-    version: 109.0.0+up0.26.0-rc.6
+    - assets/rancher-turtles/rancher-turtles-109.0.0+up0.26.0.tgz
+    version: 109.0.0+up0.26.0
   rancher-webhook:
   - annotations:
       catalog.cattle.io/certified: rancher
       catalog.cattle.io/hidden: 'true'
-      catalog.cattle.io/kube-version: < 1.36.0-0
+      catalog.cattle.io/kube-version: < 1.37.0-0
       catalog.cattle.io/managed: 'true'
       catalog.cattle.io/namespace: cattle-system
       catalog.cattle.io/os: linux
       catalog.cattle.io/permits-os: linux,windows
-      catalog.cattle.io/rancher-version: '>= 2.14.0-0 < 2.15.0-0'
+      catalog.cattle.io/rancher-version: '>= 2.14.0-0 < 2.16.0-0'
       catalog.cattle.io/release-name: rancher-webhook
     apiVersion: v2
-    appVersion: 0.10.0-rc.11
+    appVersion: 0.10.0
+    created: '2026-04-28T14:04:00.774454859-04:00'
     description: ValidatingAdmissionWebhook for Rancher types
-    digest: 39fb993d6d36949626077b1c0ae3f40f9dc01f8e485229da1ca244d9e7192c21
+    digest: aec08861c8dd0f604efba443c5697c1fab9d019c477e76da15fc2e8c3b2dfb63
     name: rancher-webhook
     urls:
-    - assets/rancher-webhook/rancher-webhook-109.0.0+up0.10.0-rc.11.tgz
-    version: 109.0.0+up0.10.0-rc.11
-  remotedialer-proxy:
-  - annotations:
-      catalog.cattle.io/certified: rancher
-      catalog.cattle.io/hidden: 'true'
-      catalog.cattle.io/managed: 'true'
-      catalog.cattle.io/namespace: cattle-system
-      catalog.cattle.io/os: linux
-      catalog.cattle.io/permits-os: linux,windows
-      catalog.cattle.io/rancher-version: '>= 2.11.0-0'
-      catalog.cattle.io/release-name: remotedialer-proxy
-    apiVersion: v2
-    appVersion: 0.7.0-rc.5
-    description: creates a bridge between k8s api-server and imperative api when Rancher
-      is outside of the cluster
-    digest: 530f435dabcda9373b9ca9af9739d812b7cf000932a5e2f035c3dcd6ac0e418f
-    name: remotedialer-proxy
-    urls:
-    - assets/remotedialer-proxy/remotedialer-proxy-109.0.0+up0.7.0-rc.5.tgz
-    version: 109.0.0+up0.7.0-rc.5
+    - assets/rancher-webhook/rancher-webhook-109.0.0+up0.10.0.tgz
+    version: 109.0.0+up0.10.0
   system-upgrade-controller:
   - annotations:
       catalog.cattle.io/certified: rancher
       catalog.cattle.io/hidden: 'true'
-      catalog.cattle.io/kube-version: '>= 1.25.0-0 < 1.36.0-0'
+      catalog.cattle.io/kube-version: '>= 1.25.0-0 < 1.37.0-0'
       catalog.cattle.io/managed: 'true'
       catalog.cattle.io/namespace: cattle-system
       catalog.cattle.io/os: linux
       catalog.cattle.io/permits-os: linux,windows
-      catalog.cattle.io/rancher-version: '>= 2.14.0-0 < 2.15.0-0'
+      catalog.cattle.io/rancher-version: '>= 2.15.0-0 < 2.16.0-0'
       catalog.cattle.io/release-name: system-upgrade-controller
     apiVersion: v1
-    appVersion: v0.17.0
+    appVersion: v0.19.1
+    created: '2026-04-28T14:04:00.803445301-04:00'
     description: General purpose controller to make system level updates to nodes.
-    digest: aeb78e410bc24952a7adefe8110515e555cfbff0bc53f232e2e9cae51b02b85c
+    digest: c5740800861995d5c2c02582841b2c75c2493efae014a3826d0ec1cb1d14ae41
+    home: https://github.com/rancher/system-upgrade-controller
     kubeVersion: '>= 1.25.0-0'
     name: system-upgrade-controller
     urls:
-    - assets/system-upgrade-controller/system-upgrade-controller-109.0.0.tgz
-    version: 109.0.0
+    - assets/system-upgrade-controller/system-upgrade-controller-110.0.0.tgz
+    version: 110.0.0
+generated: '0001-01-01T00:00:00Z'
