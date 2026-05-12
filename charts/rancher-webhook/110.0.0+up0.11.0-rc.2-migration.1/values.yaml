@@ -1,6 +1,6 @@
 image:
   repository: rancher/rancher-webhook
-  tag: latest
+  tag: local-migration
   imagePullPolicy: IfNotPresent
 
 global:
