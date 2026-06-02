@@ -29,3 +29,24 @@ auth:
   clientCA: ""
   # Allowlist of CNs for kube-apiserver client certs. If empty, any cert signed by the CA provided in clientCA will be accepted.
   allowedCNs: []
+
+replicaCount: 1
+
+resources: {}
+
+affinity:
+  podAntiAffinity:
+    preferredDuringSchedulingIgnoredDuringExecution:
+    - weight: 100
+      podAffinityTerm:
+        labelSelector:
+          matchExpressions:
+          - key: app
+            operator: In
+            values:
+            - rancher-webhook
+        topologyKey: kubernetes.io/hostname
+
+podDisruptionBudget:
+  enabled: false
+  minAvailable: 1
