@@ -47632,7 +47632,7 @@ entries:
     appVersion: 0.11.0-rc.99
     created: "2026-06-12T18:00:00.000000000Z"
     description: ValidatingAdmissionWebhook for Rancher types
-    digest: 35ddeaf9eb8b049d0c1d4ecaed4d35ac6c6b33fafd2d08389d526baec1e96c68
+    digest: e89eda5cd45c9d6fc837e8c1429a4d1a2da31386a94599dae622da376cc1a0c1
     name: rancher-webhook
     urls:
     - assets/rancher-webhook/rancher-webhook-110.0.0+up0.11.0-rc.99.tgz
